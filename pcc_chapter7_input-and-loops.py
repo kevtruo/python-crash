@@ -2,6 +2,7 @@ chapter_exercise = {
     '7.1': 'Rental Car',
     '7.2': 'Restaurant Seating',
     '7.2.5': 'Favorite City',
+    '7.4': 'Pizza Toppings',
 }
 
 print(f"\nHello user. Welcome to chapter 7! What chapter exercise are you on? Here are the available chapters:")
@@ -50,7 +51,23 @@ if chapter_request == '7.2.5':
 
     print(f"Your current travel list is {travel_list}!")
 
+if chapter_request == '7.4':
+    input(f"\nPress enter to continue...\n")
+
+    pizza_order = [ ]
+    print(f"Welcome to KT's Pizza!\n")
+
+    while True:
+        pizza_topping = input(f"Please enter what pizza topping you'd like: ")
+        pizza_order.append(pizza_topping)
+        print(f"Adding {pizza_topping.upper()} to your pizza!")
+
+        continue_order = input(f"Would you like to add anymore toppings? (y/n): ")
+        if continue_order.lower() != 'y':
+            break
     
+    print(f"\nYour final pizza order includes: {pizza_order}")
+    print(f"Total toppings: {len(pizza_order)}")
 
 # ERROR CHECK
 else:
