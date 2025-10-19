@@ -3,6 +3,8 @@ chapter_exercise = {
     '7.2': 'Restaurant Seating',
     '7.2.5': 'Favorite City',
     '7.4': 'Pizza Toppings',
+    '7.5': 'Movie Tickets',
+    '7.6': 'Three Exits',
 }
 
 print(f"\nHello user. Welcome to chapter 7! What chapter exercise are you on? Here are the available chapters:")
@@ -68,6 +70,57 @@ if chapter_request == '7.4':
     
     print(f"\nYour final pizza order includes: {pizza_order}")
     print(f"Total toppings: {len(pizza_order)}")
+
+if chapter_request == '7.5':
+    input(f"\nPress enter to continue...\n")
+    
+    print(f"Welcome to KT Movies!\n")
+
+    while True:
+        age_input = input(f"Enter your age (or 'quit' to exit): ")
+        
+        if age_input.lower() == 'quit':
+            break
+        
+        user_age = int(age_input)
+        
+        if user_age < 3:
+            print(f"Your ticket is free!")
+        elif user_age <= 12:
+            print(f"Your ticket is $10.")
+        else:
+            print(f"Your ticket is $15.")
+        
+        print()
+    
+    print(f"Thank you for visiting KT Movies!")
+
+if chapter_request == '7.6':
+    input(f"\nPress enter to continue...\n")
+
+    print(f"Welcome to KT's Firearms!\n")
+    purchase_order = input(f"\nAre you here to purchase a firearm? (y/n): ")
+
+    while purchase_order == 'y':
+        print(f"Customers purchasing firearms must enter their age.")
+        age_input = input(f"Enter your age (or 'quit' to exit): ")
+        
+        if age_input.lower() == 'quit':
+            print(f"\nThank you for visiting KT's Firearms.\n")
+            break
+        
+        user_age = int(age_input)
+        if user_age < 18:
+            print(f"Sorry, you are not permitted to purchase firearms.")
+            break
+        elif user_age < 21:
+            print(f"You may purchase firearms, but no handguns.")
+        else:
+            print(f"Your may purchase any kind of firearm.")
+
+    while purchase_order == 'n':
+        print(f"\nThank you for visiting KT's Firearms.\n")
+        break
 
 # ERROR CHECK
 else:
