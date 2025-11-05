@@ -5,6 +5,8 @@ chapter_exercise = {
     '7.4': 'Pizza Toppings',
     '7.5': 'Movie Tickets',
     '7.6': 'Three Exits',
+    '7.8': 'Deli',
+    '8.1': 'Message',
 }
 
 print(f"\nHello user. Welcome to chapter 7! What chapter exercise are you on? Here are the available chapters:")
@@ -121,6 +123,34 @@ if chapter_request == '7.6':
     while purchase_order == 'n':
         print(f"\nThank you for visiting KT's Firearms.\n")
         break
+
+if chapter_request == '7.8':
+    input(f"\nPress enter to continue...\n")
+
+    sandwich_orders = ['Italian','Meatball','Chicken Tender','Turkey']
+    finished_sandwiches = []
+    
+    print("Starting sandwich orders...\n")
+
+    while sandwich_orders:
+        current_order = sandwich_orders.pop(0)
+        print(f"I made your {current_order} sandwich.")
+        finished_sandwiches.append(current_order)
+    
+    print(f"\nAll sandwiches have been made!")
+    print(f"\nFinished sandwiches:")
+    for sandwich in finished_sandwiches:
+        print(f" - {sandwich}")
+
+if chapter_request == '8.1':
+    input(f"\nPress enter to continue...\n")
+    
+    def message():
+        print(f"Hello! In this chapter we are learning about functions.")
+        print(f"You have successfully called the 'message' function.")
+    
+    # Call the function
+    message()
 
 # ERROR CHECK
 else:
